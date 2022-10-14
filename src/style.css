@@ -17,7 +17,13 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+  
 
 body {
     background: var(--primary-color);
@@ -68,12 +74,20 @@ body::-webkit-scrollbar-track {
     cursor: pointer;
     transition: 2s;
 }
+li a{
+    text-decoration: none;
+    color: white;
+    transition: 2s;
+}
 
-.menu li:hover {
+.menu li:hover,
+li a:hover {
     color: var(--tertiary-color);
     letter-spacing: 5px;
     font-size: 1rem;
 }
+
+
 
 .banner {
     color: white;
@@ -101,18 +115,29 @@ p {
 
 .image img,
 .image_sobre {
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
     position: relative;
 }
 
 .circle {
     position: absolute;
+    width: 1000px;
+    height: 1000px;
+    top: 3rem;
+    right: 1rem;
+    background-color: transparent;
+    opacity: 0.3;
+}
+
+.circle_form{
+    position: absolute;
     width: 700px;
     height: 700px;
-    top: 5rem;
-    right: 5rem;
-    background-color: transparent;
+    top: 360rem;
+    left: 1rem;
+    opacity: 0.3;
+
 }
 
 .buttonsArea {
@@ -163,11 +188,9 @@ p {
     justify-content: center;
     font-size: 18px;
     font-weight: 400;
+    text-decoration: none;
 }
 
-.view_github_btn {
-    max-width: 157px;
-}
 
 .view_github_btn,
 .view_project_btn {
@@ -226,13 +249,12 @@ p {
     animation: arrow 5s ease-in-out infinite;
 }
 
-.arrow img {
-    width: 50px;
-    height: 30px;
+.arrow i {
+    color: white;
 }
 
 
-.about {
+#about {
     margin-top: 150px;
     display: flex;
     justify-content: space-between;
@@ -240,8 +262,10 @@ p {
     color: white;
 }
 
-.titleAbout {
+.titleAbout,
+.footer_div {
     display: flex;
+    color: white;
 }
 
 .titleAbout div{
@@ -249,6 +273,13 @@ p {
     width: 8px;
     background: linear-gradient(180deg, #0066A1 46.03%, #74CFFF 100%);
 
+}
+
+.footer_div div {
+    height: 18px;
+    width: 4px;
+    background: linear-gradient(180deg, #0066A1 46.03%, #74CFFF 100%);
+    margin-right: 10px;
 }
 
 .infoMe{
@@ -278,7 +309,7 @@ p {
 }
 
 
-.projects {
+#projects {
     margin: 150px auto ;
     color: white;
 }
@@ -296,8 +327,10 @@ p {
 
 }
 
-.titleProjects h2 {
+.titleProjects h2,
+.form_title {
     font-size: 36px;
+    color: white;
 }
 
 
@@ -324,7 +357,20 @@ p {
     right: 1rem;
 }
 
-.projects_all {
+.form_shape {
+    background: #59B9FA;
+    position: absolute;
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    filter: blur(200px);
+    top: 319rem;
+    right: 1rem;
+    opacity: 0.5;
+}
+
+.projects_all,
+.certificate_all {
     margin-top: 100px;
     width: 100%;
     justify-content: space-around;
@@ -332,6 +378,11 @@ p {
     display: grid;
     position: relative;
     grid-template-columns: auto auto;
+}
+
+.certificate_all {
+    grid-template-columns: auto auto auto;
+    margin-bottom: 140px;
 }
 
 .project {
@@ -347,7 +398,7 @@ p {
     position: relative;
 }
 
-.project h3 {
+.project h3{
     font-size: 20px;
     font-weight: 700;
     text-align: center;
@@ -398,6 +449,7 @@ p {
 }
 
 .btn_more_projects {
+    color: white;
     margin: 90px auto ;
     width: 371px;
     height: 47px;
@@ -407,21 +459,48 @@ p {
     border: none;
     border-radius: 5px;
     position: relative;
+    transition: 2s;
 }
 
+.btn_more_projects:hover {
+    background-color: #151F40;
+    border: 2px solid var(--tertiary-color);
+    color: var(--tertiary-color);
+}
+
+.btn_more_projects a {
+    color: #17202F;
+}
+
+.btn_more_projects a:hover {
+    color: var(--tertiary-color);
+}
+
+#skills {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.slide_title {
+    color: white;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 40px;
+}
 
 .slide {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 1200px;
+    width: 100%;
     height: 376px;
     overflow: hidden;
     transition: all 0.4s;
 }
 
 .slides {
-    width: 4000px;
+    width: 1000px;
     display: flex;
     gap: 60px;
     text-align: center;
@@ -429,16 +508,27 @@ p {
 
 
 .images img {
-    width: 200px;
+    width: 100px;
 }
 
+.images span {
+    color: white;
+}
 #fisrt_img {
     transition: all 2s;
+}
+
+.images{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn {
     position: absolute;
     color: white;
+    opacity: 0.5;
     padding: 10px;
     text-align: center;
     display: flex;
@@ -446,9 +536,15 @@ p {
     justify-content: center;
     cursor: pointer;
     transition: all 0.4s;
-    font-size: 1.7em;
-    margin-top: -5px;
+    font-size: 2.7em;
+    margin-top: 27px;
 }
+
+.btn:hover {
+    opacity: none;
+    color: var(--text-color);
+}
+
 
 #back {
     left: 10%;
@@ -460,6 +556,159 @@ p {
 
 
 
+.img_certificate {
+    width: 100%;
+    padding: 8px;
+    background-color: var(--secondary-color);
+    
+}
+
+.area_title_certificate{
+    margin-top: -10px;
+    height: 80px;
+    background-color: var(--card-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    border-radius: 8px ;
+}
+
+.certificate_area {
+    margin-top: 40px;
+}
+
+#certificate {
+    position: relative;
+    z-index: 99;
+}
+
+#form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+#form p {
+    text-align: center;
+}
+
+.form_contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 60px;
+    gap: 20px;
+    
+}
+
+.form_contact input {
+    display: flex;
+    width: 750px;
+    height: 50px;
+    
+}
+
+.form_contact input,
+.form_contact textarea {
+    padding: 15px 40px;
+    border-radius: 5px;
+    border: 1px solid #8182B0;
+    background-color: #192241;
+    color: #585A69;
+    
+}
+
+
+input::placeholder,
+textarea::placeholder{
+    color: #585A69;
+    font-size: 14px;
+}
+
+.btn_submit {
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+} 
+
+.teste {
+    display: flex;
+    justify-content: end;
+}
+
+.btn_submit {
+    width: 370px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 2s;
+}
+
+.btn_submit:hover {
+    background-color: transparent;
+    border: 2px solid var(--tertiary-color);
+    color: var(--tertiary-color);
+}
+
+footer{
+    max-width: 100vw;
+    margin-top: 150px;
+    background-color: rgba(23, 32, 47, 0.6);
+    height: 300px;
+}
+
+.description_footer {
+    max-width: 540px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    font-size: 14px ;
+    font-weight: 400;
+    line-height: 26px;
+    position: relative;
+}
+
+.logos_footer {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navigation_menu {
+    margin-top: 100px;
+}
+
+.titleAbout {
+    font: 18px;
+    font-weight: 700;
+    color: white;
+}
+
+.negation ul{
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    list-style: none;
+    
+}
+
+.negation ul li {
+    margin-top: 10px;
+}
 
 
 
@@ -517,5 +766,42 @@ p {
         
     top: -5rem;
     left: -5rem;
+    }
+}
+
+
+@media (min-width: 700px) and (max-width: 1050px) {
+    .image img{
+        width: 300px;
+        height: 300px;
+    }
+
+    .tittle {
+        margin-left: 20px;
+    }
+
+    .project {
+        width: 400px;
+    }
+
+    .project img {
+        width: 300px;
+    }
+    
+    .buttonsArea_Project {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project p {
+        max-width: 300px;
+    }
+
+    .view_github_btn {
+        width: 250px; 
+    }
+
+    .flex {
+        margin: 20px;
     }
 }
