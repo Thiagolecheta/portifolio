@@ -10,26 +10,47 @@
     <title>Thiago Lecheta - Desenvolvedor front-end</title>
 </head>
 <body>
+   
     <header class="container">
         <div class="home_shape top_banner"></div>
         <img  class="circle" src="src/img/circle_efect.png" alt="circulo efeito bg">
-
+        
         <nav>
             <div class="menu">
                 <div class="logo">
                     teste
                 </div>
-                <ul>
+
+                <div class="menuDesktop">
                     <li><a href="#about">Sobre</a></li>
-                    <li><a href="#projects">Projetos</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#certificate">Certificados</a></li>
-                    <li><a href="#form">Contato</a></li>
-                </ul>
+                        <li><a href="#projects">Projetos</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#certificate">Certificados</a></li>
+                        <li><a href="#form">Contato</a></li>
+                </div>
+                
+                <div class="menuMobile">
+                    <div class="menuBurguer" id="menuBurguer">
+                        <div id="line1" class="mm_line"></div>
+                        <div id="line2" class="mm_line"></div>
+                        <div id="line3" class="mm_line"></div>
+                    </div>
+                    <ul class="nav">
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#projects">Projetos</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#certificate">Certificados</a></li>
+                        <li><a href="#form">Contato</a></li>
+                    </ul>
+                </div>
             </div>
-        </nav>
+            <div class="menu-bg" id="menu-bg"></div>
+        </nav> 
     </header>
+    
     <main class="container">
+
+          
         <section>
             <div class="banner">
                 <div class="home_shape md_banner"></div>
@@ -65,16 +86,9 @@
                     <div></div>
                     <h2>Sobre Mim</h2>
                 </div>
-                <p class="meText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed enim non arcu viverra bibendum a at quam. Quisque egestas, risus id tincidunt 
-                    tempus, sem sapien dignissim purus, eget egestas turpis tortor eget turpis. Sed vehicula non nisi sed rhoncus. Lorem ipsum dolor sit amet, 
-                    consectetur adipiscing elit. Integer id nulla eget massa condimentum sagittis. Phasellus hendrerit imperdiet tristique. Nunc volutpat elit mauris, 
-                    id sollicitudin neque efficitur sed. In ornare tortor vitae dui tristique interdum. Nulla maximus non arcu ac iaculis.
-                     Nullam leo nunc, euismod pellentesque orci sit amet, efficitur imperdiet libero. Cras sit amet viverra arcu, vel rhoncus diam. Morbi eu imperdiet metus.
-                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed enim non arcu viverra bibendum a at quam. Quisque egestas, risus id tincidunt 
-                     tempus, sem sapien dignissim purus, eget egestas turpis tortor eget turpis. Sed vehicula non nisi sed rhoncus. Lorem ipsum dolor sit amet, 
-                     consectetur adipiscing elit. Integer id nulla eget massa condimentum sagittis. Phasellus hendrerit imperdiet tristique. Nunc volutpat elit mauris, 
-                     id sollicitudin neque efficitur sed. In ornare tortor vitae dui tristique interdum. Nulla maximus non arcu ac iaculis.
-                      Nullam leo nunc, euismod pellentesque orci sit amet, efficitur imperdiet libero. Cras sit amet viverra arcu, vel rhoncus diam. Morbi eu imperdiet metus.</p>
+                <p class="meText">Antes de tudo, deixa eu me apresentar: Prazer, sou o Thiago! <br>
+                    Desenvolvedor Front-End e designer a mais de 2 anos, autodidata e apaixonado por programação e desing.<br>
+                    Por conta disso escolhi focar e me aperfeiõar em front-end</p>
                 <div class="topics">
                     <div class="topic">Sobre</div>
                     <div class="topic">Sobre</div>
@@ -83,6 +97,9 @@
                 </div>
             </div>
         </section>
+        
+
+        
         <section>
             <div id="projects">
                 <div class="titleProjects">
@@ -93,7 +110,7 @@
                 <div class="projects_shape_bottom"></div>
                 <div class="projects_all">
                     <div class="project p1">
-                        <h3>Projeto 1</h3>
+                        <h3>Clone Disney Plus</h3>
                         <img src="/src/img/projectimg.png" alt="Imagem demonstrativa do projeto 1">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed enim non arcu viverra bibendum a at quam. Quisque egestas, risus id tincidunt 
                             tempus, sem sapien dignissim purus, eget egestas turpis tortor eget turpis. Sed vehicula non nisi sed rhoncus. Lorem ipsum dolor sit amet, 
@@ -122,10 +139,11 @@
                     </div>
                     <div class="project p2">
                         <h3>Urna Eleitoral</h3>
-                        <img src="/src/img/urna.png" alt="Imagem demonstrativa do projeto 1">
+                        <img src="/src/img/imagens_projetos/urna.png" alt="Imagem demonstrativa do projeto de uma urna">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed enim non arcu viverra bibendum a at quam. Quisque egestas, risus id tincidunt 
                             tempus, sem sapien dignissim purus, eget egestas turpis tortor eget turpis. Sed vehicula non nisi sed rhoncus. Lorem ipsum dolor sit amet, 
-                            consectetur adipiscing elit. Integer id nulla eget massa condimentum sagittis. Phasellus hendrerit imperdiet tristique.</p>
+                            consectetur adipiscing elit. Integer id nulla eget massa condimentum sagittis. Phasellus hendrerit imperdiet tristique.
+                        </p>
                         <div class="line_div_project"></div>
                         <h4>Tecnologias usadas</h4>
                         <div class="tec_using">
@@ -210,7 +228,9 @@
                 </div>
             </div>
         </section>
+    
 
+        
         <section id="skills">
             
             <h2 class="slide_title">Minhas skills</h2>
@@ -271,7 +291,7 @@
             </div>
         </section>
 
-
+        
         <section id="certificate">
             <div class="titleProjects">
                 <div></div>
@@ -340,16 +360,16 @@
                 </div>
             </div>
         </section>
+        
 
 
 
 
-
-        <section id="form">
+              <section id="form">
             <div class="form_shape"></div>
             <img class="circle_form" src="src/img/circle_efect.png" alt="circulo efeito bg">
             <h3 class="form_title">Me mande uma mensagem!</h3>
-            <p class="form_p">Tem uma pergunta ou proposta, ou apenas quer<br>dizer olá? Vá em frente.</p>
+            <p class="form_p">Tem uma pergunta ou proposta, ou apenas quer dizer olá? Vá em frente.</p>
 
             <form action="https://formsubmit.co/thiago.lecheta1@gmail.com" method="POST" class="form_contact">
                 <input type="text" name="name" placeholder="Digite seu nome ou empresa" required>
@@ -373,8 +393,9 @@
     </main>
 
     <footer>
-        <div class="container flex">
-            <div class="description_footer">
+         
+        <div class=" container flex">
+           <div class="description_footer">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla malesuada nisl a iaculis pretium. 
                     Morbi sodales egestas nulla, non rutrum magna malesuada ac. Cras gravida sodales placerat. 
                 </p>
@@ -402,6 +423,7 @@
                         </ul>
                     </nav>
             </div>
+             
         </div>
     </footer>
     

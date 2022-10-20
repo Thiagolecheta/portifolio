@@ -115,14 +115,14 @@ p {
 
 .image img,
 .image_sobre {
-    width: 500px;
+    max-width: 500px;
     height: 500px;
     position: relative;
 }
 
 .circle {
     position: absolute;
-    width: 1000px;
+    max-width: 1000px;
     height: 1000px;
     top: 3rem;
     right: 1rem;
@@ -132,7 +132,7 @@ p {
 
 .circle_form{
     position: absolute;
-    width: 700px;
+    max-width: 700px;
     height: 700px;
     top: 360rem;
     left: 1rem;
@@ -271,6 +271,7 @@ p {
 .titleAbout div{
     height: 43px;
     width: 8px;
+    color: #0066A1;
     background: linear-gradient(180deg, #0066A1 46.03%, #74CFFF 100%);
 
 }
@@ -500,7 +501,7 @@ p {
 }
 
 .slides {
-    width: 1000px;
+    max-width: 1000px;
     display: flex;
     gap: 60px;
     text-align: center;
@@ -711,6 +712,52 @@ footer{
 }
 
 
+.menuMobile {
+    display: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin-right: 10px;
+    z-index: 99;
+}
+
+.menuDesktop{
+    display: flex;
+}
+ 
+.menuMobile ul {
+    opacity: 0;
+    transition: 1s;
+    background: linear-gradient(180deg, #0066A1 46.03%, #74CFFF 100%);
+    border-radius: 8px;
+    width: 250px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    z-index: 1;
+}
+
+.showMenu {
+    opacity: 1 !important;
+}
+.mm_line {
+    left: 100px;
+    height: 4px;
+    background-color: var(--tertiary-color);
+    border-radius: 8px;
+    display: flex;
+    transition: 0.3s ease;
+    z-index: 99;
+    background-color: #0066A1;
+}
+
+#line1 {
+    transform: translateY(-4px);
+}
+#line3 {
+    transform: translateY(4px);
+}
+
 
 
 
@@ -770,14 +817,14 @@ footer{
 }
 
 
-@media (min-width: 700px) and (max-width: 1050px) {
+@media screen and (max-width: 1050px) {
     .image img{
-        width: 300px;
-        height: 300px;
+        width: 400px;
+        height: 400px;
     }
 
     .tittle {
-        margin-left: 20px;
+        padding: 20px;
     }
 
     .project {
@@ -804,4 +851,204 @@ footer{
     .flex {
         margin: 20px;
     }
+
+    .menuMobile  {
+        display: block;
+
+    }
+
+    .menuMobile ul {
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100vh;
+        
+        transform: translate(0%, 0%);
+    }
+
+    .menuDesktop {
+        display: none;
+    }
+    
+
+    .menu ul .nav {
+        padding: 0;
+        margin: 0 20px;
+        transition: 0.3s ease;
+        display: none;
+    }
+
+    .menu-bg, #menuMobile {
+        top: 0;
+        right: 0;
+        position: absolute;
+    }
+
+    
+    #menuMobile{
+        z-index: 2;
+    }
+
+    .change-bg{
+        width: 550px;
+        height: 540px;
+        transform: translate(0%, -30%);
+    }
+
+    .change .mm_line {
+        background-color: var(--text-color);
+    }
+
+    .change #line1 {
+        transform: translate(4px) rotateZ(-45deg);
+        top: 8px;
+    }
+
+    .change #line3 {
+        opacity: 0;
+    }
+    
+
+    .change #line2 {
+        transform: translate(4px) rotateZ(45deg);
+        top: 8px;
+    }
+
+    .change {
+        display: block;
+    }
+}
+
+@media (max-width: 930px) {
+    
+    .banner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 30px;
+        max-width: 100%;
+    }
+    .menu {
+        padding: 20px;
+    }
+
+    .menuMobile {
+        margin: 20px;
+    }
+    .meText {
+        max-width: 300px;
+    }
+    .projects_all,
+    .certificate_all {
+        grid-template-columns: auto;
+    }
+
+    #form {
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form_title {
+        font-size: 26px;
+    }
+    .form_contact {
+        max-width: 96%;
+    }
+
+    #form p {
+        max-width: 100%;
+    }
+
+    .form_contact input,
+    .form_contact textarea{
+        max-width: 100%;
+    }
+
+    
+
+    #about {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 10px;
+        align-items: center;
+    }
+
+    .img_sobre {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 99;
+    }
+
+
+    .projects_all {
+        z-index: 99;
+        max-width: 80%;
+        margin: auto;
+    }
+
+    .project {
+        max-width: 350px;
+        padding: 20px;
+    }
+
+    
+    .buttonsArea {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        padding: 10px;
+        align-items: center;
+    }
+    .secundary_btn {
+        margin-top: 100px;
+        width: 340px;
+        margin: 0;
+    }
+
+    .primaty_btn {
+        margin-bottom: 15px;
+    }
+
+    .view_github_btn {
+        width: 250px;
+        margin-top: 100px;
+        margin: 0;
+    }
+
+    .circle_form{
+        display: none;
+    }
+    .btn_submit {
+        width: 60%;
+    }
+
+    .home_shape {
+        z-index: -99;
+    }
+
+    .btn_more_projects {
+        width: 350px;
+    }
+
+
+    .flex {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    footer {
+        height: 600px;
+    }
+
+    #skills {
+        display: none;
+    }
+
 }

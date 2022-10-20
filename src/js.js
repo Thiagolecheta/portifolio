@@ -29,9 +29,31 @@ function slide(){
 setInterval(()=>{
     atual++
     slide()
-}, 3000)
+}, 3000) 
 
 
+let menuBar = document.querySelector('.menuMobile .menuBurguer')
+
+menuBar.addEventListener('click', (e)=>{
+    e.preventDefault()
+
+    
+
+    let menuMobile = document.querySelector('.menuMobile ul')
+
+    if(menuMobile.classList.contains('showMenu')){
+        menuMobile.classList.remove('showMenu')
+    } else {
+    menuMobile.classList.add('showMenu')}
+    document.getElementById("menuBurguer").classList.toggle("change")
+    document.getElementById("nav").classList.toggle("change")
+
+    
+})
+
+    
+    
+    
 
 
 
