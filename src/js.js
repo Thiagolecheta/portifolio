@@ -52,10 +52,21 @@ menuBar.addEventListener('click', (e)=>{
 })
 
     
+
+    function scrollTopBtn(){
+        window.scrollTo({top: 0, behavior: 'smooth'})
+    }  
+
+    function decidirBotao() {
+        if(window.scrollY === 0){
+            document.querySelector('.scrollTopBtn').style.display = 'none';
+        } else {
+            document.querySelector('.scrollTopBtn').style.display = 'block';
+        }
+    }
     
     
-
-
+    window.addEventListener('scroll', decidirBotao)
 
 //Animações js
 
