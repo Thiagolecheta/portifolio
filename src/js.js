@@ -6,71 +6,72 @@ let image = document.getElementById('first_img')
 
 
 
-back.addEventListener('click', ()=>{
+back.addEventListener('click', () => {
     atual--
     slide()
 })
 
-next.addEventListener('click', ()=>{
+next.addEventListener('click', () => {
     atual++
     slide()
 })
 
-function slide(){
-    if(atual >= quant.length){
+function slide() {
+    if (atual >= quant.length) {
         atual = 0
-    } else if (atual < 0){
-        atual = quant.length-1
+    } else if (atual < 0) {
+        atual = quant.length - 1
     }
 
-    image.style.marginLeft = -50*atual+'px'
+    image.style.marginLeft = -50 * atual + 'px'
 }
 
-setInterval(()=>{
+setInterval(() => {
     atual++
     slide()
-}, 3000) 
+}, 3000)
 
 
 let menuBar = document.querySelector('.menuMobile .menuBurguer')
 
-menuBar.addEventListener('click', (e)=>{
+menuBar.addEventListener('click', (e) => {
     e.preventDefault()
 
-    
+
 
     let menuMobile = document.querySelector('.menuMobile ul')
 
-    if(menuMobile.classList.contains('showMenu')){
+    if (menuMobile.classList.contains('showMenu')) {
         menuMobile.classList.remove('showMenu')
     } else {
-    menuMobile.classList.add('showMenu')}
+        menuMobile.classList.add('showMenu')
+    }
     document.getElementById("menuBurguer").classList.toggle("change")
     document.getElementById("nav").classList.toggle("change")
 
-    
+
 })
 
-    
 
-    function scrollTopBtn(){
-        window.scrollTo({top: 0, behavior: 'smooth'})
-    }  
 
-    function decidirBotao() {
-        if(window.scrollY === 0){
-            document.querySelector('.scrollTopBtn').style.display = 'none';
-        } else {
-            document.querySelector('.scrollTopBtn').style.display = 'block';
-        }
+function scrollTopBtn() {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+}
+
+function decidirBotao() {
+    if (window.scrollY === 0) {
+        document.querySelector('.scrollTopBtn').style.display = 'none';
+    } else {
+        document.querySelector('.scrollTopBtn').style.display = 'block';
     }
-    
-    
-    window.addEventListener('scroll', decidirBotao)
+}
+
+
+window.addEventListener('scroll', decidirBotao)
 
 //Animações js
 
-window.sr = ScrollReveal({ 
+window.sr = ScrollReveal({
     reset: true,
     distance: '60px',
     duration: 2000,
@@ -80,12 +81,12 @@ window.sr = ScrollReveal({
 
 //banner
 
-sr.reveal('.tittle' , {
+sr.reveal('.tittle', {
     delay: 500,
     origin: 'left'
 });
 
-sr.reveal('.image' , {
+sr.reveal('.image', {
     delay: 600,
     origin: 'bottom'
 });
