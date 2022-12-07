@@ -69,6 +69,67 @@ function decidirBotao() {
 
 window.addEventListener('scroll', decidirBotao)
 
+//evento click para adicionar e remover class da area about
+
+let cards = document.querySelector('.cardAbout')
+let um = document.getElementById('um')
+let dois = document.getElementById('dois')
+let tres = document.getElementById('tres')
+
+let infoMe = document.querySelector('.infoMe')
+let infoMe2 = document.querySelector('.infoMe2')
+let infoMe3 = document.querySelector('.infoMe3')
+
+
+
+function card1() {
+
+
+
+    dois.classList.remove('cardAboutActive')
+    tres.classList.remove('cardAboutActive')
+    um.classList.toggle('cardAboutActive')
+
+
+    infoMe3.classList.add('oculto')
+    infoMe2.classList.add('oculto')
+    infoMe.classList.remove('oculto')
+}
+
+
+
+function card2() {
+
+
+    um.classList.remove('cardAboutActive')
+    tres.classList.remove('cardAboutActive')
+    dois.classList.toggle('cardAboutActive')
+
+    infoMe.classList.add('oculto')
+    infoMe3.classList.add('oculto')
+    infoMe2.classList.remove('oculto')
+}
+
+
+function card3() {
+    
+
+    um.classList.remove('cardAboutActive')
+    dois.classList.remove('cardAboutActive')
+    tres.classList.toggle('cardAboutActive')
+
+    
+    infoMe3.classList.remove('oculto')
+    infoMe.classList.add('oculto')
+    infoMe2.classList.add('oculto')
+}
+
+
+
+
+
+
+
 //Animações js
 
 window.sr = ScrollReveal({
@@ -131,6 +192,11 @@ sr.reveal('.p3', {
 
 sr.reveal('.p4', {
     delay: 1000,
+    origin: 'bottom'
+})
+
+sr.reveal('.p5', {
+    delay: 1200,
     origin: 'bottom'
 })
 

@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="src/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="src/img/favicon.png" type="image/x-icon" />
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://kit.fontawesome.com/ca14b9e588.js"></script>
-    <title>Thiago Lecheta - Desenvolvedor front-end</title>
+    <title>Thiago Lecheta - Desenvolvedor</title>
 </head>
 
 <body>
@@ -20,8 +21,9 @@
         <nav>
             <div class="menu">
                 <div class="logo">
-                    teste
+                    <img src="src/img/logo-thiago.png" alt="Logo thiago lecheta dev">
                 </div>
+
 
                 <div class="menuDesktop">
                     <li><a href="#about">Sobre</a></li>
@@ -60,8 +62,9 @@
             <div class="banner">
                 <div class="home_shape md_banner"></div>
                 <div class="tittle">
-                    <h1>Olá, me chamo Thiago Lecheta e sou Desenvolvedor front-end</h1>
-                    <p>The quick brown fox jumps over the lazy dog.</p>
+                    <p>Olá, me chamo Thiago Lecheta</p>
+                    <h1>Desenvolvedor Front-end Jr</h1>
+                    <p>Seja bem-vindo ao meu portfolio</p>
                     <div class="buttonsArea">
                         <a href="#projects" class="primaty_btn">
                             Projetos feitos por Mim
@@ -85,24 +88,80 @@
 
         <section id="about">
             <div class="about_shape"></div>
-            <div class="img_sobre">
-                <img src="src/img/marginalia-programming.gif" alt="Ilustração de um programador front-end">
+            <div class="aboutArea">
+                <div class="cardAbout cardAboutActive" id="um" onclick="card1()">
+                    <div>
+                        <h3>Sobre mim</h3>
+                        <p>Me conheça melhor!</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-solid fa-user"></i>
+                    </div>
+                </div>
+                <div class="cardAbout" id="dois" onclick="card2()">
+                    <div>
+                        <h3>Informações</h3>
+                        <p>Informações detalhadas</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-solid fa-info"></i>
+                    </div>
+                </div>
+                <div class="cardAbout" id="tres" onclick="card3()">
+                    <div>
+                        <h3>Habilidades</h3>
+                        <p>Veja algumas de minhas habilidades</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-solid fa-list"></i>
+                    </div>
+                </div>
+
+
             </div>
             <div class="infoMe">
                 <div class="titleAbout">
                     <div></div>
                     <h2>Sobre Mim</h2>
                 </div>
-                <p class="meText">Antes de tudo, deixa eu me apresentar: Prazer, sou o Thiago! <br>
-                    Desenvolvedor Front-End e designer a mais de 2 anos, autodidata e apaixonado por programação e
-                    desing.<br>
-                    Por conta disso escolhi focar e me aperfeiõar em front-end</p>
-                <div class="topics">
-                    <div class="topic">Sobre</div>
-                    <div class="topic">Sobre</div>
-                    <div class="topic">Sobre</div>
-                    <div class="topic">Sobre</div>
+                <p class="meText">Antes de tudo, deixa eu me apresentar: Prazer, sou o Thiago! </p>
+                <p class="meText"> 24 anos, Bacharelado em Análise e Desenvolvimento de Sitemas.
+                    Desenvolvedor e designer a mais de 2 anos, apaixonado por programação.
+                    No momento atuando em como Desenvolvedor apenas em projetos pessoais e de estudo, onde lido maioria
+                    das vezes com aplicações Web.</p>
+            </div>
+            <div class="infoMe2 oculto">
+                <div class="titleAbout2">
+                    <div></div>
+                    <h2>Informações</h2>
                 </div>
+                <div class="topics">
+                    <div class="topic">
+                        Nome: <p>Thiago Felipe Lecheta</p>
+                    </div>
+                    <div class="topic">
+                        Idade: <p>24</p>
+                    </div>
+                    <div class="topic">
+                        E-mail: <p>thiago.lecheta1@gmail.com</p>
+                    </div>
+                    <div class="topic">
+                        Cargo: <p>Desenvolvedor Front-end Jr</p>
+                    </div>
+                    <div class="topic">
+                        Endereço: <p>Curitiba-PR</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="infoMe3 oculto">
+                <div class="titleAbout3">
+                    <div></div>
+                    <h2>Minhas Habilidades</h2>
+                </div>
+                <p>Possuo conhecimentos : HTML5, CSS3, JavaScript, Figma, Bootstrap, VueJS, ReactJS, Git
+                    e MySQL.
+                </p>
             </div>
         </section>
 
@@ -120,134 +179,127 @@
                     <div class="project p1">
                         <h3>Clone Disney Plus</h3>
                         <img src="/src/img/imagens_projetos/disney.png" alt="Imagem demonstrativa do projeto 1">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed enim non arcu viverra
-                            bibendum a at quam. Quisque egestas, risus id tincidunt
-                            tempus, sem sapien dignissim purus, eget egestas turpis tortor eget turpis. Sed vehicula non
-                            nisi sed rhoncus. Lorem ipsum dolor sit amet,
-                            consectetur adipiscing elit. Integer id nulla eget massa condimentum sagittis. Phasellus
-                            hendrerit imperdiet tristique.</p>
+                        <div class="projectP">
+                            <p>Clone da interface do Disney Plus, consiste um uma home page que lista os principais filmesda Disney, onde em cada card contem informações gerais do filme.</p>
+                            <p> Essas informações vem de uma Api publica chamada TMDB.</p>
+                        </div>
                         <div class="line_div_project"></div>
                         <h4>Tecnologias usadas</h4>
                         <div class="tec_using">
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Git</span>
+                            <span>GitHub</span>
+                            <span>Figma</span>
+                            <span>TMDB(API)</span>
                         </div>
                         <div class="buttonsArea_Project">
                             <a href="https://github.com/Thiagolecheta/Clone-Disney-Plus" target="_blank">
                                 <button class="secundary_btn view_github_btn">GitHub</button>
                             </a>
-                            <button class="primaty_btn view_project_btn">Vizualizar</button>
+                            <a href="https://clone-disney-plus-api.netlify.app/" target="_blank">
+                                <button class="primaty_btn view_project_btn">Visualizar</button>
+                            </a>
 
                         </div>
                     </div>
                     <div class="project p2">
                         <h3>Urna Eleitoral</h3>
                         <img src="/src/img/imagens_projetos/urna.png" alt="Imagem demonstrativa do projeto de uma urna">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed enim non arcu viverra
-                            bibendum a at quam. Quisque egestas, risus id tincidunt
-                            tempus, sem sapien dignissim purus, eget egestas turpis tortor eget turpis. Sed vehicula non
-                            nisi sed rhoncus. Lorem ipsum dolor sit amet,
-                            consectetur adipiscing elit. Integer id nulla eget massa condimentum sagittis. Phasellus
-                            hendrerit imperdiet tristique.
-                        </p>
+                        <div class="projectP">
+                            <p>Esse projeto fala por si só, é uma ideia de uma urna eleitoral web. Onde você digita os
+                                números de candidatos e aparece em tempo real na tela.</p>
+                            <p>Os dados dos candidatos vem de um json.</p>
+                        </div>
                         <div class="line_div_project"></div>
                         <h4>Tecnologias usadas</h4>
                         <div class="tec_using">
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Git</span>
+                            <span>GitHub</span>
                         </div>
                         <div class="buttonsArea_Project">
-                            <button class="secundary_btn view_github_btn">GitHub</button>
-                            <button class="primaty_btn view_project_btn">Vizualizar</button>
+                            <a href="https://github.com/Thiagolecheta/Urna-Web/tree/master" target="_blank">
+                                <button class="secundary_btn view_github_btn">GitHub</button>
+                            </a>
+                            <a href="https://thiagolecheta.github.io/Urna-Web/" target="_blank">
+                                <button class="primaty_btn view_project_btn">Visualizar</button>
+                            </a>
 
                         </div>
                     </div>
                     <div class="project p3">
-                        <h3>Projeto 1</h3>
-                        <img src="/src/img/projectimg.png" alt="Imagem demonstrativa do projeto 1">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed enim non arcu viverra
-                            bibendum a at quam. Quisque egestas, risus id tincidunt
-                            tempus, sem sapien dignissim purus, eget egestas turpis tortor eget turpis. Sed vehicula non
-                            nisi sed rhoncus. Lorem ipsum dolor sit amet,
-                            consectetur adipiscing elit. Integer id nulla eget massa condimentum sagittis. Phasellus
-                            hendrerit imperdiet tristique.</p>
+                        <h3>Clima do tempo</h3>
+                        <img src="/src/img/imagens_projetos/clima-tempo.png" alt="Imagem demonstrativa do projeto clima do tempo">
+                        <div class="projectP">
+                            <p>Consiste em uma pesquisa do clima do tempo da grande maioria das cidades do mundo, mostrando
+                                se esta nublado, sol... Também pressão do ar, velocidade do vento.</p>
+                            <p>Os dados vem da API Open weather.</p>
+                        </div>
+                        
                         <div class="line_div_project"></div>
                         <h4>Tecnologias usadas</h4>
                         <div class="tec_using">
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>API</span>
+                            <span>Git</span>
+                            <span>GitHub</span>
                         </div>
                         <div class="buttonsArea_Project">
-                            <button class="secundary_btn view_github_btn">GitHub</button>
-                            <button class="primaty_btn view_project_btn">Vizualizar</button>
+                            <a href="https://github.com/Thiagolecheta/Clima-do-tempo" target="_blank">
+                                <button class="secundary_btn view_github_btn">GitHub</button>
+                            </a>
+                            <a href="https://tangerine-sunburst-0e9dc1.netlify.app/" target="_blank">
+                                <button class="primaty_btn view_project_btn">Visualizar</button>
+                            </a>
 
                         </div>
                     </div>
                     <div class="project p4">
-                        <h3>Projeto 1</h3>
-                        <img src="/src/img/projectimg.png" alt="Imagem demonstrativa do projeto 1">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed enim non arcu viverra
-                            bibendum a at quam. Quisque egestas, risus id tincidunt
-                            tempus, sem sapien dignissim purus, eget egestas turpis tortor eget turpis. Sed vehicula non
-                            nisi sed rhoncus. Lorem ipsum dolor sit amet,
-                            consectetur adipiscing elit. Integer id nulla eget massa condimentum sagittis. Phasellus
-                            hendrerit imperdiet tristique.</p>
+                        <h3>Personagens Rick and Morty</h3>
+                        <img src="/src/img/imagens_projetos/rick-and-morty.png"
+                            alt="Imagem demonstrativa do projeto rick and morty">
+                        <div class="projectP">
+                            <p>Esse projeto foi um teste para uma vaga front-end com o objetivo de criar uma listagem com
+                                todos os personagens, além de listar também tem a opção de pesquisar pelo nome ou também
+                                pelo filtro de pesquisa.
+                            </p>
+                            <p>Todos os personagem vem de uma api publica</p>
+                        </div>
+                        
                         <div class="line_div_project"></div>
                         <h4>Tecnologias usadas</h4>
                         <div class="tec_using">
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
-                            <span>Teste</span>
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>Tailwind</span>
+                            <span>JavaScript</span>
+                            <span>ReactJS</span>
+                            <span>Git</span>
+                            <span>GitHub</span>
+                            <span>API</span>
                         </div>
                         <div class="buttonsArea_Project">
-                            <button class="secundary_btn view_github_btn">GitHub</button>
-                            <button class="primaty_btn view_project_btn">Vizualizar</button>
+                            <a href="https://github.com/Thiagolecheta/test-front-end/tree/Thiago_Lecheta"
+                                target="_blank">
+                                <button class="secundary_btn view_github_btn">GitHub</button>
+                            </a>
+                            <a href="https://thiago-rick-and-morty.netlify.app/" target="_blank">
+                                <button class="primaty_btn view_project_btn">Visualizar</button>
+                            </a>
 
                         </div>
                     </div>
+
                 </div>
-                <div class="btn_more">
+                <!-- <div class="btn_more">
                     <button class="btn_more_projects"><a href="projects.html">Ver mais projetos</a></button>
-                </div>
+                </div> -->
             </div>
         </section>
 
@@ -348,7 +400,8 @@
                 <div class="certificate_area">
                     <a href="https://alunos.b7web.com.br/media/certificates/certificado_9116983.jpg" target="_blank">
                         <div class="img_certificate img1">
-                            <img src="/src/img/certificados/git-github-b7web.png" alt="Certificado git e github - b7web">
+                            <img src="/src/img/certificados/git-github-b7web.png"
+                                alt="Certificado git e github - b7web">
                         </div>
                         <div class="area_title_certificate t1">
                             <div>
@@ -358,9 +411,11 @@
                     </a>
                 </div>
                 <div class="certificate_area">
-                    <a href="https://www.udemy.com/certificate/UC-af36de52-510d-4cd8-973d-295fbbb80261/" target="_blank">
+                    <a href="https://www.udemy.com/certificate/UC-af36de52-510d-4cd8-973d-295fbbb80261/"
+                        target="_blank">
                         <div class="img_certificate img1">
-                            <img src="/src/img/certificados/logica-programacao-udemy.png" alt="Certificado logica de programacao e algoritmos - udemy">
+                            <img src="/src/img/certificados/logica-programacao-udemy.png"
+                                alt="Certificado logica de programacao e algoritmos - udemy">
                         </div>
                         <div class="area_title_certificate t1">
                             <div>
@@ -371,12 +426,12 @@
                 </div>
                 <div class="certificate_area">
                     <div class="img_certificate img1">
-                            <img src="/src/img/certificados/figma.png" alt="Curso de figma - Com Felipe Santana">
+                        <img src="/src/img/certificados/figma.png" alt="Curso de figma - Com Felipe Santana">
+                    </div>
+                    <div class="area_title_certificate t1">
+                        <div>
+                            <h4>Curso de Figma com Felipe Santana</h4>
                         </div>
-                        <div class="area_title_certificate t1">
-                            <div>
-                                <h4>Curso de Figma com Felipe Santana</h4>
-                            </div>
                     </div>
                 </div>
                 <div class="certificate_area">
@@ -391,7 +446,7 @@
                         </div>
                     </a>
                 </div>
-                
+
             </div>
         </section>
 
@@ -405,7 +460,8 @@
             <h3 class="form_title">Me mande uma mensagem!</h3>
             <p class="form_p">Tem uma pergunta ou proposta, ou apenas quer dizer olá? Vá em frente.</p>
 
-            <form action="https://formsubmit.co/thiago.lecheta1@gmail.com" method="POST" class="form_contact">
+            <form action="https://api.staticforms.xyz/submit" method="POST" class="form_contact">
+                <input type="hidden" name="accessKey" value="fb9b6041-fea6-49b4-b6c7-4f0d04efaf7d">
                 <input type="text" name="name" placeholder="Digite seu nome ou empresa" required>
                 <input type="email" name="email" placeholder="Digite seu e-mail" required>
 
@@ -415,10 +471,8 @@
                     <button type="submit" class="btn_submit">Enviar mensagem</button>
                 </div>
 
-                <input type="hidden" name="_subject" value="Novo Contato!">
-                <input type="text" name="_honey" style="display:none">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html">
+                <input type="text" name="honeypot" style="display: none;">
+                <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/index.html"> 
             </form>
 
         </section>
@@ -429,16 +483,15 @@
 
         <div class=" container flex">
             <div class="description_footer">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla malesuada nisl a iaculis pretium.
-                    Morbi sodales egestas nulla, non rutrum magna malesuada ac. Cras gravida sodales placerat.
+                <p>Esse foi o meu portifolio, espero que tenha gostado.<br>
+                    Abaixo estão meu Github e Linkedin
                 </p>
                 <div class="logos_footer">
                     <a href="https://github.com/Thiagolecheta" target="_blank">
-                        <img src="/src/img/iconmonstr-github-1 1.png" width="35" height="35" alt="logo github"
-                            class="github_Logo">
+                        <i class="fas fa-github"></i>
                     </a>
                     <a href="https://www.linkedin.com/in/thiagofelipelecheta/" target="_blank">
-                        <img src="/src/img/iconmonstr-linkedin-1 1.png" width="30" height="30" alt="logo linkedin">
+                        <i class="fas fa-brands fa-linkedin"></i>
                     </a>
                 </div>
             </div>
